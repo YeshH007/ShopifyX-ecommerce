@@ -197,10 +197,10 @@ let debounce = (func, delay) => {
 }
 if (searchbar) {
   searchbar.addEventListener('input', debounce((event) => {
-    prodarr.forEach((e) => {
+    prodarr.map((e) => {
       e.parentElement.style.display = 'flex'
     })
-    prodarr.forEach((e) => {
+    prodarr.map((e) => {
       if (!((e.innerHTML).toLowerCase().includes(searchbar.value))) {
         e.parentElement.style.display = 'none'
       }
